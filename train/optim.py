@@ -289,17 +289,13 @@ def generator():
 
             v1 = np.random.randint(length)
             v2 = np.random.randint(length)
-            v3 = np.random.randint(length)
-            v4 = np.random.randint(length)
 
-            rate = np.random.randint(1, 11, 4)
+            rate = np.random.randint(1, 11, 2)
             rate = rate / float(sum(rate))
-            a, b, c, d = [float(i) for i in rate]
+            a, b = [float(i) for i in rate]
             x.append(
                 a * train_group[label][v1]
                 + b * train_group[label][v2]
-                + c * train_group[label][v3]
-                + d * train_group[label][v4]
             )
 
             lb = np.zeros(10)
